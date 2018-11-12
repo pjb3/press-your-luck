@@ -64,7 +64,7 @@ $(function(){
      });
 
     chosenCel = $rows[Math.floor(Math.random()*$rows.length)];
-    $(chosenCel).addClass('flash');  
+    $(chosenCel).addClass('flash');
     console.log($(chosenCel));
   };
 
@@ -74,7 +74,6 @@ $(function(){
     $(chosenCel).removeClass('flash');
     clearTimeout(flash);
     add = setInterval(blink,500);
-    $('#spins').html('<p>Spins: ' + spins + '</p>');
   }
 
   function checkFreeSpin(){
@@ -83,41 +82,26 @@ $(function(){
     if (clickedCel == -1){
       score = 0;
       spins -= 1;
-      addWhammys();    
     } else if (chosenCel.attributes.free_spin.value == 1) {
       score += parseInt(clickedCel);
       spins += 1;
       // console.log(chosenCel.attributes.value.data-free-spin);
     } else {
       score += parseInt(clickedCel);
-    };  
-  }
-
-  function addWhammys(){
-    $('.whammyPic').eq(whammyCount).css('background-image', "url(img/whammy2.png)");
-    
-    if (whammyCount == 2){
-      $('#celMiddle').html("<p>GAME OVER. CLICK BELOW To RESTART</p>");
-      console.log("line 99 game over! whammy count: " + whammyCount);
-      $('#start').text('RESTART').on('click', reset());
-    } else {
-      whammyCount++; 
-      console.log("line 101 whamy count: " + whammyCount);
-    }
+    };
   }
 
   function stop(){
     // event.stopPropagation();
     clearInterval(add);
-    checkFreeSpin();  
+    checkFreeSpin();
 
-    $('#score').text("$ " + score);
     flash(chosenCel, 5, 100);
   }
 
   function flash(elem, times, speed) {
       if (times > 0 || times < 0) {
-          if ($(elem).hasClass("flash")) 
+          if ($(elem).hasClass("flash"))
               $(elem).removeClass("flash");
           else
               $(elem).addClass("flash");
@@ -135,22 +119,15 @@ $(function(){
       }
   }
 
-  function reset(){
-    score = 0;
-    spins = 2;
-    $rows = [];
-    whammyCount = 0;
-  }
 
-
-  $('#target').on('click',function(){
+  $('body').on('keyup',function(){
     if($(this).attr('data-click-state') == 1) {
       $(this).attr('data-click-state', 0)
       stop(event);
     } else {
       $(this).attr('data-click-state', 1)
       start(event);
-    }    
+    }
   });
 
 });
