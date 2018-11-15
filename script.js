@@ -22,13 +22,13 @@ $(function(){
     {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
     {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
     {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
-    {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
-    {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
-    {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
-    {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
-    {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
-    {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
-    {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
+    // {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
+    // {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
+    // {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
+    // {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
+    // {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
+    // {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
+    // {value: -1,    text: "WHAMMY", free_spin: "0", img: "whammy2.png"},
   ];
 
   //buttons
